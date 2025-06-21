@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Main Content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F1F1">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:contentDescription="Back Button"
+                android:padding="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Spoken English Book PDF"
+                    android:textColor="@android:color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Chapter Buttons -->
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <!-- Add chapter buttons dynamically -->
+                <Button
+                    android:id="@+id/chap1sub1"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:text="1: Mass And Spoken"/>
+
+                <Button
+                    android:id="@+id/chap1sub2"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"
+                    android:text="2: Mass And Spoken" />
+
+                <Button
+                    android:id="@+id/chap1sub3"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="3: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub4"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="4: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub5"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="5: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub6"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="6: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub7"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:text="7: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub8"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="8: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub9"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textStyle="bold"
+                    android:text="9: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub10"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="10: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub11"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="11: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub12"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textStyle="bold"
+                    android:text="12: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub13"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textStyle="bold"
+                    android:text="13: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub14"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="14: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub15"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textStyle="bold"
+                    android:text="15: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+                <Button
+                    android:id="@+id/chap1sub16"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="16: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+                <Button
+                    android:id="@+id/chap1sub17"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="17: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+                <Button
+                    android:id="@+id/chap1sub18"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="18: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub19"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textStyle="bold"
+                    android:text="19: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub20"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textStyle="bold"
+                    android:text="20: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub21"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textStyle="bold"
+                    android:text="21: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub22"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textStyle="bold"
+                    android:text="22: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub23"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="23: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub24"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="24: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub25"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textStyle="bold"
+                    android:text="25: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub26"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="26: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub27"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:text="27: Mass And Spoken"
+                    android:background="@drawable/brodersubjectbox"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub28"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="28: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub29"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textStyle="bold"
+                    android:text="29: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub30"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textStyle="bold"
+                    android:text="30: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub31"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:background="@drawable/brodersubjectbox"
+                    android:textStyle="bold"
+                    android:text="31: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub32"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="32: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub33"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="33: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/chap1sub34"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/brodersubjectbox"
+                    android:text="34: Mass And Spoken"
+                    android:layout_marginBottom="8dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

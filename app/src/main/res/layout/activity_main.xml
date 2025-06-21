@@ -1,0 +1,365 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Main Content with Toolbar -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Updated Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Fillings Coulsdon"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Log Out"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:backgroundTint="#FF5722"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="16dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Main Content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="7dp">
+
+                <!-- Placeholder for the Green-bordered Box -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginBottom="16dp">
+
+                    <!-- Background Image -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/frontban"/>
+
+                    <!-- Green Border as the foreground -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/green_border"
+                        android:gravity="center">
+
+                        <!-- You can place other content inside this LinearLayout if needed -->
+                    </LinearLayout>
+
+
+
+                </FrameLayout>
+
+
+
+
+                <!-- Subject Cards -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="3"
+                    android:layout_marginTop="16dp"
+                    android:layout_margin="8dp">
+
+                    <!-- Card Example -->
+                    <LinearLayout
+                        android:id="@+id/subject1"
+                        android:background="@drawable/border_cell"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        android:padding="0dp"
+                        android:layout_columnWeight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="151dp"
+                            android:layout_height="165dp"
+                            android:paddingTop="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:src="@drawable/wp" />
+
+                        <TextView
+                            android:layout_width="181dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/brodersubjectbox"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Admin Login"
+                            android:padding="5dp"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <!-- Duplicate for Other Cards -->
+                    <LinearLayout
+                        android:id="@+id/subject2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/border_cell"
+                        android:padding="0dp"
+                        android:layout_columnWeight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="151dp"
+                            android:layout_height="165dp"
+                            android:paddingTop="5dp"
+                            android:src="@drawable/wp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"
+                            android:background="@drawable/brodersubjectbox"
+                            android:text="60 Days Practice Book"
+                            android:textColor="#FFFFFF"
+                            android:textSize="17dp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/subject3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/border_cell"
+                        android:orientation="vertical"
+                        android:padding="0dp"
+                        android:layout_columnWeight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="151dp"
+                            android:layout_height="165dp"
+                            android:paddingTop="5dp"
+                            android:src="@drawable/wp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="60 Days Spoken English Course 60 Notes"
+                            android:background="@drawable/brodersubjectbox"
+                            android:textColor="#FFFFFF"
+                            android:textAlignment="center"
+                            android:textSize="15dp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/subject4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/border_cell"
+                        android:padding="0dp"
+                        android:layout_columnWeight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="151dp"
+                            android:layout_height="165dp"
+                            android:paddingTop="5dp"
+                            android:src="@drawable/wp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="75 Days Hard Spoken Course Notes"
+                            android:textColor="#FFFFFF"
+                            android:textAlignment="center"
+                            android:background="@drawable/brodersubjectbox"
+                            android:textSize="16dp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/subject5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/border_cell"
+                        android:padding="0dp"
+                        android:layout_columnWeight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="151dp"
+                            android:layout_height="165dp"
+                            android:paddingTop="5dp"
+                            android:src="@drawable/wp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"
+                            android:text="Zero To Zenith Course Notes"
+                            android:textColor="#FFFFFF"
+                            android:background="@drawable/brodersubjectbox"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/subject6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/border_cell"
+                        android:padding="0dp"
+                        android:layout_columnWeight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="151dp"
+                            android:layout_height="165dp"
+                            android:paddingTop="5dp"
+                            android:src="@drawable/wp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"
+                            android:text="Zero To Zenith Course Notes"
+                            android:background="@drawable/brodersubjectbox"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15dp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/subject7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/border_cell"
+                        android:padding="0dp"
+                        android:layout_columnWeight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="151dp"
+                            android:paddingTop="5dp"
+                            android:layout_height="165dp"
+                            android:src="@drawable/wp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/brodersubjectbox"
+                            android:textAlignment="center"
+                            android:text="Zero To Zenith Course Notes"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15dp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/subject8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/border_cell"
+                        android:padding="0dp"
+                        android:layout_columnWeight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="151dp"
+                            android:layout_height="165dp"
+                            android:paddingTop="5dp"
+                            android:src="@drawable/wp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"
+                            android:text="Zero To Zenith Course Notes"
+                            android:background="@drawable/brodersubjectbox"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15dp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+
+
+                </GridLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>
